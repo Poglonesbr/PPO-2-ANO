@@ -23,7 +23,6 @@ header {
 
 section {
     
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -31,6 +30,7 @@ section {
     width: 80%;
     margin: 30px auto;
     border-radius: 15px;
+    font-size: 1.3rem;
 
     & img {
         border-radius: 20px;
@@ -40,28 +40,31 @@ section {
         filter: blur(1.5px);
     }
 
-    & a {
-        text-decoration: none;
-        color: black;
-    }
-
-    & p {
-        font-size: 1.3rem;
-    }
 }
 
-#Horarios img {
-    filter: blur(1.5px);
+h2 {
+    text-align: center;
+    display: block;
 }
 
-section div {
-    width: 70%;
+main  {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows:  1fr  ;
+    width: auto;
+    height: auto;
+   
+}   
+section div div {
+    width: 100%;
+    text-align: center;
 }
 
 #introdução {
     height: 50%;
-    display: flex;
-    flex-direction: column;
+    
+    
     padding: 30px;
 
 

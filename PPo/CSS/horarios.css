@@ -1,19 +1,18 @@
 footer {
     border-radius: 80px 80px 0px 0px;
     background-image: radial-gradient(#178429e1 40%, #096318e3 100%);
-    width: 85%;
-    height: 2rem;
-    margin: 0;
-    bottom: 0;
+    width: 83%;
+    height: 100%;
+    margin: auto;
     padding: .5rem;
     text-align: center;
-    margin-left: 9.5rem;
     font-size: 18px;
+    
 }
 
 body{
     background-color: #17842925;
-    align-items: center;
+    margin: 0;
 }
 
 header {
@@ -32,4 +31,27 @@ header {
 
 .Social {
     margin: auto 75px auto auto;
+}
+
+.ttl{
+    text-align: center;
+    background-image: radial-gradient(#178429e1 40%, #096318e3 100%);
+    border-radius: 5rem;
+    margin: 1rem 40% 1rem 40%;
+    padding: 0.2rem;
+}
+
+.txt{
+    text-align: center;
+    background-image: radial-gradient(#178429e1 40%, #096318e3 100%);
+    border-radius: 15px;
+    margin: 1rem 9.7rem 1rem 9.7rem;
+    padding: 1rem;  
+    font-size: 22px;
+}
+
+.horarioimg{
+    width: 40rem;
+    height: 20rem;
+    margin: 2rem 9.6rem 2rem 9.6rem;
 }

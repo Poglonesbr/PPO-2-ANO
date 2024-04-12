@@ -49,9 +49,13 @@ header {
     padding: 1rem;  
     font-size: 22px;
 }
+.imgs {
+    justify-content: center;
+    text-align: center;
+}
 
 .horarioimg{
-    width: 40rem;
-    height: 20rem;
-    margin: 2rem 9.6rem 2rem 9.6rem;
+    width: 40%;
+    height: 20%;
+    margin: auto;
 }

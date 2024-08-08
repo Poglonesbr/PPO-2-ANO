@@ -1,0 +1,141 @@
+@import "/site if/Index/base.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+  --card_height: 55vh;
+  --card_width: 22.5vw
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0px;
+}
+
+.ttl {
+  text-align: center;
+  margin: 1%;
+  padding: 20px 10px 20px 10px;
+  border: solid transparent;
+  border-radius: 10px;
+  background-color: #222222b9;
+  border-radius: 10px;
+  line-height: 160%;
+  color: white;
+}
+
+.card__img {
+  border-radius: 50%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card {
+  width: var(--card_width);
+  height: var(--card_height);
+  background-color: #014203;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 900px;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin: 5% 15% 10% 0%;
+}
+
+.card__img {
+  border-radius: 50%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card svg {
+  width: 28px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+
+.card__content {
+  text-align: justify;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(200px, 77%, 1600px);
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #000000da;
+  transform: translateY(110%);
+  transform-origin: bottom;
+  transition: all 0.6s ease-in-out;
+  overflow-y: auto;
+}
+
+.card:hover .card__content {
+  transform: translateY(30%);
+}
+
+.card:hover .card__img {
+  filter: grayscale(60%);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 38px;
+  color: white;
+  font-weight: 700;
+  font: bold;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.4;
+  max-height: 80px;
+  overflow: visible;
+}
+
+.card__content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.card__content:-webkit-scrollbar-track {
+  background: #4CAF50;
+}
+
+.card__content::-webkit-scrollbar-thumb {
+  background-color: #4caf4fa2;
+  border-radius: 20px;
+}
+
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #535353;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4caf4fa2;
+  border-radius: 20px;
+}

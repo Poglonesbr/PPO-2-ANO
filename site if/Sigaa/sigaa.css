@@ -1,0 +1,49 @@
+@import "/site if/Index/base.css";
+
+:root {
+    --text_font_size: 1.25rem;
+}
+
+.conteiner1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    padding: 0% 0% 0.5% 0%;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.txt3 {
+    text-align: justify;
+    padding: 20px 10px 20px 10px;
+    border: solid transparent;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    margin: 0% 70% 1% 0%;
+    background-color: var(--color-neutral-1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: var(--text_font_size);
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 0% 0% 1% 0%;
+}
+
+
+.Social {
+    margin: auto 75px auto auto;
+}
+
+.horarioimg {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin-right: 100%;
+
+}

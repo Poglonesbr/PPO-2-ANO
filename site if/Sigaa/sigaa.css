@@ -40,10 +40,13 @@ h2 {
     margin: auto 75px auto auto;
 }
 
-.horarioimg {
-    display: block;
-    max-width: 50%;
-    height: auto;
-    margin-right: 100%;
+.horario_img {
+    width: 95%;
+    height: 95%;
+}
 
+.img {
+    height: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

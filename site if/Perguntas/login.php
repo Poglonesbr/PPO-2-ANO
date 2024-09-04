@@ -72,138 +72,141 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login e Cadastro</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos gerais */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #74b9ff, #0984e3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #2d3436;
-            overflow: hidden;
-        }
+       body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #bdc3c7); /* Degradê de cinza escuro para claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ecf0f1; /* Cor do texto principal em branco */
+    overflow: hidden;
+}
 
-        /* Container principal de login e cadastro */
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            width: 350px;
-            text-align: center;
-            position: absolute;
-            transition: transform 0.6s ease, opacity 0.6s ease;
-            opacity: 0;
-            transform: translateY(100vh);
-        }
+/* Container principal de login e cadastro */
+.container {
+    background-color: #34495e; /* Cinza escuro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    position: absolute;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    transform: translateY(100vh);
+}
 
-        /* Mostrar container */
-        .show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* Mostrar container */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        /* Esconder container para fora da tela */
-        .hide {
-            transform: translateY(100vh);
-        }
+/* Esconder container para fora da tela */
+.hide {
+    transform: translateY(100vh);
+}
 
-        /* Título */
-        .container h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #0984e3;
-        }
+/* Título */
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2ecc71; /* Verde */
+}
 
-        /* Labels */
-        .container label {
-            display: block;
-            text-align: left;
-            font-weight: bold;
-            margin-bottom: 5px;
-            margin-top: 15px;
-        }
+/* Labels */
+.container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #2ecc71; /* Verde */
+}
 
-        /* Campos de entrada */
-        .container input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #dfe6e9;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 16px;
-            transition: border 0.3s;
-        }
+/* Campos de entrada */
+.container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #2c3e50; /* Fundo cinza escuro */
+    color: #ecf0f1; /* Texto branco */
+    transition: border 0.3s;
+}
 
-        .container input:focus {
-            border-color: #74b9ff;
-            outline: none;
-        }
+.container input:focus {
+    border-color: #2ecc71; /* Borda verde ao focar */
+    outline: none;
+}
 
-        /* Botões de ação */
-        .container button {
-            width: 100%;
-            padding: 12px;
-            background-color: #0984e3;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+/* Botões de ação */
+.container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        .container button:hover {
-            background-color: #74b9ff;
-            transform: scale(1.05);
-        }
+.container button:hover {
+    background-color: #27ae60; /* Verde escuro ao passar o mouse */
+    transform: scale(1.05);
+}
 
-        .container button:active {
-            background-color: #0984e3;
-            transform: scale(0.98);
-        }
+.container button:active {
+    background-color: #2ecc71;
+    transform: scale(0.98);
+}
 
-        /* Link para alternar entre login e cadastro */
-        .toggle-link {
-            margin-top: 15px;
-            display: block;
-            font-size: 14px;
-            color: #0984e3;
-            text-decoration: none;
-            cursor: pointer;
-        }
+/* Link para alternar entre login e cadastro */
+.toggle-link {
+    margin-top: 15px;
+    display: block;
+    font-size: 14px;
+    color: #2ecc71; /* Verde */
+    text-decoration: none;
+    cursor: pointer;
+}
 
-        .toggle-link:hover {
-            text-decoration: underline;
-        }
+.toggle-link:hover {
+    text-decoration: underline;
+}
 
-        /* Mensagem de erro */
-        .error {
-            color: #d63031;
-            margin-top: 10px;
-            font-weight: bold;
-        }
+/* Mensagem de erro */
+.error {
+    color: #e74c3c; /* Vermelho para mensagem de erro */
+    margin-top: 10px;
+    font-weight: bold;
+}
 
-        /* Estilo para dispositivos móveis */
-        @media (max-width: 400px) {
-            .container {
-                width: 90%;
-                padding: 20px;
-            }
+/* Estilo para dispositivos móveis */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
 
-            .container h2 {
-                font-size: 20px;
-            }
+    .container h2 {
+        font-size: 20px;
+    }
 
-            .container button {
-                padding: 10px;
-            }
-        }
+    .container button {
+        padding: 10px;
+    }
+}
+
     </style>
 </head>
 <body>
